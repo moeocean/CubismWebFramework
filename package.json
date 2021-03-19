@@ -1,4 +1,12 @@
 {
+  "name": "@livenovel/framework",
+  "version": "1.0.0",
+  "description": "LiveNovel controller framework",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "private": true,
   "scripts": {
     "build": "tsc",
