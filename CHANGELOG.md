@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [4-r.5-beta.2] - 2022-06-02
+
+### Fixed
+
+* Fixed a bug that caused Multiply Color / Screen Color of different objects to be applied.
+  * See `CHANGELOG.md` in Core.
+  * No modifications to Samples and Framework.
+
+
+## [4-r.5-beta.1] - 2022-05-19
+
+### Added
+
+* Add processing related to Multiply Color / Screen Color added in Cubism 4.2.
+
+### Fixed
+
+* Fix usage of Anisotropy filtering.
+* Fix model was not displayed when the number of masks exceeded the limit.
+* Fix getTextureDirectory() to return the directory name of the 0th texture path.
+
+
+## [4-r.4] - 2021-12-09
+
+### Fixed
+
+* Fix useless void 0.
+* Fix a warning when `SegmentType` could not be obtained when loading motion.
+* Fix return correct error values for out-of-index arguments in cubismjson by [@cocor-au-lait](https://github.com/cocor-au-lait).
+* Fix a bug that motions currently played do not fade out when play a motion.
+
+
 ## [4-r.3] - 2021-06-10
 
 ### Fixed
@@ -57,6 +89,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Reformat code using Prettier and ESLint.
 
 
+[4-r.5-beta.2]: https://github.com/Live2D/CubismWebFramework/compare/4-r.5-beta.1...4-r.5-beta.2
+[4-r.5-beta.1]: https://github.com/Live2D/CubismWebFramework/compare/4-r.4...4-r.5-beta.1
+[4-r.4]: https://github.com/Live2D/CubismWebFramework/compare/4-r.3...4-r.4
 [4-r.3]: https://github.com/Live2D/CubismWebFramework/compare/4-r.3-beta.1...4-r.3
 [4-r.3-beta.1]: https://github.com/Live2D/CubismWebFramework/compare/4-r.2...4-r.3-beta.1
 [4-r.2]: https://github.com/Live2D/CubismWebFramework/compare/4-r.1...4-r.2
