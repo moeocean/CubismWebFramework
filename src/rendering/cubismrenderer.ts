@@ -7,7 +7,6 @@
 
 import { CubismMatrix44 } from '../math/cubismmatrix44';
 import { CubismModel } from '../model/cubismmodel';
-import { m4 } from "twgl.js";
 
 /**
  * モデル描画を処理するレンダラ
