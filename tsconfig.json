@@ -1,7 +1,7 @@
 {
-  "extends": "../tsconfig.common.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "target": "es5",
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -30,11 +30,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
-    "../typings/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "src",
+    "../typings"
   ]
 }

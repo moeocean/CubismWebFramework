@@ -7,6 +7,7 @@
 
 import { CubismMatrix44 } from '../math/cubismmatrix44';
 import { CubismModel } from '../model/cubismmodel';
+import { m4 } from "twgl.js";
 
 /**
  * モデル描画を処理するレンダラ
@@ -53,15 +54,15 @@ export abstract class CubismRenderer {
    * 配列は複製されるので、元の配列は外で破棄して良い
    * @param matrix44 Model-View-Projection 行列
    */
-  public setMvpMatrix(matrix44: CubismMatrix44): void {
-    this._mvpMatrix4x4.setMatrix(matrix44.getArray());
+  public setMvpMatrix(matrix44: number[] | Float32Array): void {
+    this._mvpMatrix4x4 = matrix44;
   }
 
   /**
    * Model-View-Projection 行列を取得する
    * @return Model-View-Projection 行列
    */
-  public getMvpMatrix(): CubismMatrix44 {
+  public getMvpMatrix(): number[] | Float32Array {
     return this._mvpMatrix4x4;
   }
 
@@ -189,8 +190,7 @@ export abstract class CubismRenderer {
     this._modelColor = new CubismTextureColor();
 
     // 単位行列に初期化
-    this._mvpMatrix4x4 = new CubismMatrix44();
-    this._mvpMatrix4x4.loadIdentity();
+    this._mvpMatrix4x4 = [];
   }
 
   /**
@@ -228,7 +228,7 @@ export abstract class CubismRenderer {
    */
   public static staticRelease: Function;
 
-  protected _mvpMatrix4x4: CubismMatrix44; // Model-View-Projection 行列
+  protected _mvpMatrix4x4: number[] | Float32Array; // Model-View-Projection 行列
   protected _modelColor: CubismTextureColor; // モデル自体のカラー（RGBA）
   protected _isCulling: boolean; // カリングが有効ならtrue
   protected _isPremultipliedAlpha: boolean; // 乗算済みαならtrue

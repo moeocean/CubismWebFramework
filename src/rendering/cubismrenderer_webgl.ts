@@ -394,7 +394,7 @@ export class CubismClippingManager_WebGL {
       this._maskRenderTexture = this.getMaskRenderTexture();
 
       // モデル描画時にDrawMeshNowに渡される変換(モデルtoワールド座標変換)
-      const modelToWorldF: CubismMatrix44 = renderer.getMvpMatrix();
+      // const modelToWorldF: CubismMatrix44 = renderer.getMvpMatrix();
 
       renderer.preDraw(); // バッファをクリアする
 
@@ -901,7 +901,7 @@ export class CubismShader_WebGL {
     colorBlendMode: CubismBlendMode,
     baseColor: CubismTextureColor,
     isPremultipliedAlpha: boolean,
-    matrix4x4: CubismMatrix44,
+    matrix4x4: number[] | Float32Array,
     invertedMask: boolean
   ): void {
     if (!isPremultipliedAlpha) {
@@ -1122,7 +1122,7 @@ export class CubismShader_WebGL {
       this.gl.uniformMatrix4fv(
         shaderSet.uniformMatrixLocation,
         false,
-        matrix4x4.getArray()
+        matrix4x4
       );
 
       this.gl.uniform4f(

@@ -2,8 +2,22 @@
   "name": "@livenovel/framework",
   "version": "1.0.0",
   "description": "LiveNovel controller framework",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "dist/live2dcubismframework.js",
+  "exports": {
+    ".": "./dist/live2dcubismframework.js",
+    "./*": "./dist/*.js"
+  },
+  "types": "dist/live2dcubismframework.d.ts",
+  "typesVersions": {
+    "*": {
+      "dist/live2dcubismframework.d.ts": [
+        "./dist/live2dcubismframework.d.ts"
+      ],
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
@@ -16,13 +30,16 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "eslint": "^6.8.0",
+    "@typescript-eslint/eslint-plugin": "5.27.0",
+    "@typescript-eslint/parser": "5.27.0",
+    "eslint": "8.16.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.1",
-    "typescript": "^3.7.5"
+    "typescript": "4.7.2"
+  },
+  "dependencies": {
+    "twgl.js": "^4.19.1"
   }
 }
