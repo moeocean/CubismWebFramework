@@ -17,13 +17,15 @@ Live2D Cubism 4 Editor で出力したモデルをアプリケーションで利
 
 ### Node.js
 
-* 16.1.0
-* 14.17.0
-* 12.22.1
+* 18.1.0
+* 17.9.0
+* 16.15.0
+* 14.19.2
+
 
 ### TypeScript
 
-4.2.2
+4.6.4
 
 
 ## 開発環境構築
@@ -132,3 +134,11 @@ JSONパーサーやログ出力などのユーティリティ機能を提供し�
 ## 変更履歴
 
 当リポジトリの変更履歴については [CHANGELOG.md](CHANGELOG.md) を参照ください。
+
+
+## コミュニティ
+
+ユーザー同士でCubism SDKの活用方法の提案や質問をしたい場合は、是非コミュニティをご活用ください。
+
+- [Live2D 公式コミュニティ](https://creatorsforum.live2d.com/)
+- [Live2D community(English)](https://community.live2d.com/)
